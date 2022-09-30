@@ -66,10 +66,10 @@ function result() {
 
 function getSelected() {
   let check = [];
-
   answerEls.forEach((element) => {
     if (element.checked) return (check = [element.id, element]);
   });
+  if (check.length < 1) return alert("please select option");
   return check;
 }
 

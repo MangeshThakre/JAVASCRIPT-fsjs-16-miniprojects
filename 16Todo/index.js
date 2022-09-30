@@ -15,12 +15,13 @@ function displayItem(isReverse = true) {
     const item = document.createElement("div");
     item.className = "item";
     item.innerHTML = `
-          <input type="text" class="item_input ${i}" id=${i} value= ${e} disabled />
+          <input type="text" class="item_input ${i}" id=${i} value= "" disabled >
           <button class="editButton   ${i}"  onclick="editItem(this)" >edit</button>
           <button class="deleteButton ${i}"   onclick ="deleteItem(this)" >delete</button>
           <button class="saveButton ${i}"  style="display:none"  onclick ="saveButton(this)" >save</button>
           `;
     container.appendChild(item);
+    item.firstElementChild.value = e;
   }
 
   if (isReverse) {

@@ -20,3 +20,8 @@ h1 {
 textarea {
   width: 500px;
 }
+
+#output {
+  max-width: 33vw;
+  word-break: break-all;
+}

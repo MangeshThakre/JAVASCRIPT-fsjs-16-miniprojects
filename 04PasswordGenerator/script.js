@@ -21,7 +21,9 @@ clipboardEl.addEventListener("click", () => {
 
 generateEl.addEventListener("click", () => {
   resultEl.style.background = "none";
-
+  if (lengthEl.value < 6) {
+    return alert("mimimum lenght  should be 6");
+  }
   const lower = lowercaseEl.checked;
   const upper = uppercaseEl.checked;
   const number = numbersEl.checked;
